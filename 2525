@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Baek2525{
+    public static void main(String[] args){
+        int hour, minute, add_hour, add_minute, need_time;
+        Scanner in = new Scanner(System.in);
+
+        hour=in.nextInt();
+        minute=in.nextInt();
+        need_time=in.nextInt();
+
+        add_hour = need_time/60;
+        add_minute = need_time%60;
+        hour=add_hour+hour;
+        
+        if(add_minute+minute>=60){
+            minute=add_minute+minute-60;
+            hour=hour+1;
+            if(hour>=24){
+                hour=hour-24;
+            }
+        }
+        else{
+            minute=add_minute+minute;
+        }
+
+
+        System.out.println(hour+" "+minute);
+
+    }
+}
