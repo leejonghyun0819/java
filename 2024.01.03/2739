@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Baek2739{
+    public static void main(String[] args){
+        int N, n=1;
+        Scanner in = new Scanner(System.in);
+
+        N = in.nextInt();
+        while(n<=9){
+            System.out.println(N+" * "+n+" = "+n*N);
+            n++;
+        }
+    }
+}
