@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Baek8393{
+    public static void main(String[] args){
+        int n, sum=0;
+        Scanner in = new Scanner(System.in);
+
+        n=in.nextInt();
+        for(int k=1;k<=n;k++){
+            sum=sum+k;
+        }
+        System.out.println(sum);
+    }
+}
