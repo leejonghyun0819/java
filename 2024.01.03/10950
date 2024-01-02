@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Baek10950{
+    public static void main(String[] args){
+        int n, num1, num2;
+        Scanner in = new Scanner(System.in);
+
+        n=in.nextInt();
+        for(int k=0;k<n;k++){
+            num1=in.nextInt();
+            num2=in.nextInt();
+            System.out.println(num1+num2);
+        }
+    }
+}
