@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Baek2480{
+    public static void main(String[] args){
+        int a,b,c, biggest, reward;
+        Scanner in = new Scanner(System.in);
+
+        a=in.nextInt();
+        b=in.nextInt();
+        c=in.nextInt();
+
+        if(a>b){
+            biggest=a;
+            if(biggest>c);
+            else{
+                biggest=c;
+            }
+        }
+        else{
+            biggest=b;
+            if(biggest>c);
+            else{
+                biggest=c;
+            }
+        }
+
+        if(a==b&&a!=c&&b!=c){
+            reward=1000+a*100;
+        }
+        else if(a!=b&&a==c&&b!=c){
+            reward=1000+a*100;           
+        }
+        else if(a!=b&&a!=c&&b==c){
+            reward=1000+b*100;            
+        }
+        else if(a==b&&b==c){
+            reward = 10000+a*1000;
+        }
+        else{
+            reward=biggest*100;
+        }
+        System.out.println(reward);
+    }
+}
