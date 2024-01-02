@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Baek2884{
+    public static void main(String[] args){
+        int hour, minute;
+        Scanner in = new Scanner(System.in);
+
+        hour = in.nextInt();
+        minute = in.nextInt();
+
+        if(hour==0){
+            if(minute<45){
+                minute=minute+15;
+                System.out.println("23"+" "+minute);
+            }
+            else{
+                minute=minute-45;
+                System.out.println(hour+" "+minute);
+            }
+        }
+        else{
+            if(minute<45){
+                hour=hour-1;
+                minute=minute+15;
+                System.out.println(hour+" "+minute);
+            }
+            else{
+                minute=minute-45;
+                System.out.println(hour+" "+minute);
+            }
+        }
+    }
