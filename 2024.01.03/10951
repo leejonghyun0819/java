@@ -1,0 +1,17 @@
+package test;
+import java.util.Scanner;
+public class test {
+	
+	public static void main (String[] args) {
+		Scanner sc =new Scanner(System.in);
+		
+		while(sc.hasNextInt()) {//다음 입력없으면 종료하는 메서드, ctrl z 나 ctlr d로 eof처리하면 종료됨
+			
+			int a=sc.nextInt();
+			int b=sc.nextInt();
+			System.out.println(a+b);
+			
+		}	
+		sc.close();
+	}
+}
