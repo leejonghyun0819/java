@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Baek25304{
+    public static void main(String[] args){
+        int total, type, stuff, amount, true_total=0;
+        Scanner in = new Scanner(System.in);
+
+        total = in.nextInt();
+        type = in.nextInt();
+
+        for(int i = 1; i<=type; i++){
+            stuff = in.nextInt();
+            amount = in.nextInt();
+            true_total=stuff*amount+true_total;          
+        }
+        if(total==true_total){
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        }
+    }
+}
