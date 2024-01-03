@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Baek25314{
+    public static void main(String[] args){
+        int total_byte;
+
+        Scanner in = new Scanner(System.in);
+
+        total_byte=in.nextInt();
+
+        for(int i=1;i<=total_byte/4;i++){
+            System.out.print("long ");
+        }
+        System.out.println("int");
+    }
+}
