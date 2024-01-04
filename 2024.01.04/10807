@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Baek10807{
+    public static void main(String[] args){
+        int length, find, total=0;
+        Scanner in = new Scanner(System.in);
+        
+        length = in.nextInt();
+
+        int arr[]= new int[length];
+
+        for(int i=0; i<length;i++){
+            arr[i]=in.nextInt();
+        }
+        
+        find = in.nextInt();
+
+        for(int i=0; i<length;i++){
+            if(arr[i]==find){
+                total++;
+            }
+        }
+        System.out.println(total);
+    }
+}
