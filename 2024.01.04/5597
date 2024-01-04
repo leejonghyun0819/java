@@ -1,0 +1,17 @@
+package test;
+import java.util.Scanner;
+public class test{
+	public static void main (String[] args) {
+		Scanner sc =new Scanner(System.in);						
+		int[] number=new int[30];		
+		for(int i=0;i<28;i++) {
+			int a=sc.nextInt();
+			number[a-1]=619;
+		}
+		for(int i=0;i<30;i++) {
+			if(number[i]!=619)
+			System.out.println(i+1);
+			}
+		sc.close();	
+	}
+}
