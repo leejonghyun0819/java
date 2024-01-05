@@ -1,0 +1,26 @@
+package test;
+import java.util.Scanner;
+public class test{
+	public static void main (String[] args) {
+		Scanner sc =new Scanner(System.in);	
+		String ch=sc.nextLine();		
+		int sum=0;
+		for(int i=0;i<ch.length();i++) {
+			if(ch.charAt(i)==' ') {
+				sum++;
+			}
+		}
+		if(ch.charAt(0)!=' '&&ch.charAt(ch.length()-1)==' ') {
+			
+			sum++;
+			
+		}
+		if(ch.charAt(0)==' '&&ch.charAt(ch.length()-1)==' ') {
+			
+			sum--;
+			
+		}
+		System.out.print(sum);		
+		sc.close();
+	}
+}
