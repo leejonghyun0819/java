@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Baek27866{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        String a;
+        int n;
+        a = in.nextLine();
+        n = in.nextInt();
+
+        System.out.println(a.charAt(n-1));
+        //문자열의 위치를 찾아 char형식으로 저장하는 charAt
+    }
+}
