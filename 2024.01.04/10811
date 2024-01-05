@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Baek10811{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int length, num, i, j;
+        length = in.nextInt();
+        num = in.nextInt();
+        
+        int arr[] = new int[length];
+        int temp[] = new int[length];
+        for(int l=0;l<arr.length;l++){
+            arr[l]=l+1;
+            temp[l]=l+1;
+        }
+        for(int l=0;l<num;l++){
+            i=in.nextInt();
+            j=in.nextInt();
+            for(int k=i-1;k<j;k++){
+                if(i==j) break;
+                arr[k]=temp[i+j-2-k];
+            }
+            for(int a=0;a<num;a++){
+                temp[a]=arr[a];
+            }
+        }
+        for(int l=0;l<arr.length;l++){
+            System.out.printf("%d ",arr[l]);
+        }
+        System.out.println();
+    }
+}
