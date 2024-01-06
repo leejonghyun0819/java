@@ -1,0 +1,17 @@
+package test;
+import java.util.Scanner;
+public class test{
+	public static void main (String[] args) {
+		Scanner sc =new Scanner(System.in);
+		String ch=sc.next();
+		int cnt=1;
+		for(int i=0;i<ch.length()/2;i++) {
+			if(ch.charAt(i)!=ch.charAt(ch.length()-i-1)) {
+				cnt=0;
+			}
+		}	
+		System.out.print(cnt);
+		
+		sc.close();	
+	}
+}
