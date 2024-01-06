@@ -13,3 +13,4 @@ public class Baek1152{
         System.out.println(total);
     }
 }
+//next는 문자열을 받을 때 공백이 생기면 그 뒤론 입력 종료, nextLine은 한줄 전체를 입력으로 인식
