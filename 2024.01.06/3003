@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Baek3003{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int arr[] = {1, 1, 2, 2, 2, 8};
+        for(int i=0;i<6;i++){
+            int n = in.nextInt();
+            arr[i]=arr[i]-n;
+        }
+        for(int i=0;i<6;i++){
+            System.out.printf("%d ",arr[i]);
+        }
+    }
+}
