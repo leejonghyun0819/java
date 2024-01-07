@@ -7,14 +7,21 @@ public class test{
 		int [] number=new int[26];
 		int cnt=ch.length();
 		int sum=0,a=0,j=0;
-		for(int i=3;i<10;i++) {
-			number[j]=i;
-			number[j+1]=i;
-			number[j+2]=i;
+		for(int i=3;j<26;i++) {
+			
 			if(i!=8&&i!=10) {
+				
+				number[j]=i;
+				number[j+1]=i;
+				number[j+2]=i;
 				j=j+3;
 			}
 			else {
+			
+			number[j]=i;
+			number[j+1]=i;
+			number[j+2]=i;
+			number[j+3]=i;
 			j=j+4;
 			}
 		}
