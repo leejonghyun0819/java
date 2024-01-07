@@ -15,7 +15,7 @@ public class Baek1316{
             for(int l=0;l<a.length()-1;l++){
                 if(a.charAt(l)!=a.charAt(l+1)){
                     for(int k = l;k<a.length();k++){
-                        if(a.charAt(l)!=a.charAt(k)){
+                        if(a.charAt(l)==a.charAt(k)){
                             bool++;
                             break;
                         }
