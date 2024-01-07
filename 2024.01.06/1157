@@ -1,0 +1,33 @@
+package test;
+import java.util.Scanner;
+public class test{
+	public static void main (String[] args) {
+		Scanner sc =new Scanner(System.in);	
+		String ch=sc.next();
+		int [] number=new int[26];
+		int cnt=0,max=-1;
+		char c='?';
+		for(int i=0;i<ch.length();i++) {
+			if(65<=ch.charAt(i)&&ch.charAt(i)<=90) {
+				number[ch.charAt(i)-65]++;
+			}	
+			else {
+				number[ch.charAt(i)-97]++;
+			}
+			
+		}
+		for(int i=0;i<26;i++) {
+			if(number[i]>max) {
+				max=number[i];
+				c=(char) (i+65);
+			}
+			else if(number[i]==max) {
+				c='?';
+			}
+		}
+		System.out.print(c);
+
+		
+		sc.close();	
+	}
+}
