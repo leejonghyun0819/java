@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Baek2738{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int arr1[][]=new int[100][100];
+        int arr2[][]=new int[100][100];
+        int row = in.nextInt();
+        int column = in.nextInt();
+        for(int i=0;i<column;i++){
+            for(int j=0;j<row;j++){
+                arr1[i][j]=in.nextInt();
+            }
+        }
+        for(int i=0;i<column;i++){
+            for(int j=0;j<row;j++){
+                arr2[i][j]=in.nextInt();
+                arr1[i][j]=arr1[i][j]+arr2[i][j];
+            }
+        }    
+        for(int i=0;i<column;i++){
+            for(int j=0;j<row;j++){
+                System.out.print(arr1[i][j]+" ");
+            }
+            System.out.println();
+        }    
+    }
+}
