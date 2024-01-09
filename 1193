@@ -1,0 +1,25 @@
+package test;
+import java.util.Scanner;
+public class test{
+	public static void main (String[] args) {
+		Scanner sc =new Scanner(System.in);	
+		int X=sc.nextInt();
+		int x=0,y=0,cnt=0,a=0;
+		
+		while(X>cnt) {
+			a++;
+			cnt=a*(a+1)/2;
+		}
+		if(a%2!=0) {
+			x=1+cnt-X;
+			y=a+X-cnt;
+		}
+		else  {
+			y=1+cnt-X;
+			x=a+X-cnt;
+		}
+		System.out.println(x+"/"+y);
+		
+		sc.close();	
+	}
+}
