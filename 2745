@@ -11,7 +11,7 @@ public class test{
 				sum+=(N.charAt(i)-'A'+10)*b;
 			}
 			else {
-				sum+=(N.charAt(i)-'0');
+				sum+=(N.charAt(i)-'0')*b;
 			}
 			b=b*B;
 		}
