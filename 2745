@@ -1,0 +1,24 @@
+package test;
+import java.util.Scanner;
+public class test{
+	public static void main (String[] args) {
+		Scanner sc =new Scanner(System.in);	
+		String N=sc.next();
+		int B=sc.nextInt();
+		int sum=0,a=0,b=1;
+		for(int i=N.length()-1;i>=0;i--) {
+			if('A'<=N.charAt(i)&&N.charAt(i)<='Z') {
+				sum+=(N.charAt(i)-'A'+10)*b;
+			}
+			else {
+				sum+=(N.charAt(i)-'0');
+			}
+			b=b*B;
+		}
+		
+	
+		System.out.print(sum);
+		
+		sc.close();	
+	}
+}
