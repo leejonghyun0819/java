@@ -7,19 +7,18 @@ public class test{
 		int cnt=0,sum=0;
 		for(int j=0;j<N;j++) {
 			int n=sc.nextInt();
-			if(n!=1) {
-		for(int i=2;i<n;i++) {
-			if(n%i==0) {
+			
+		for(int i=2;i<=n;i++) {
+			if(i==n) {
 				cnt++;
-				}
 			}
-		if(cnt==0) {
-			sum++;
-			cnt=0;
+			if(n%i==0) {
+				break;
+				}
+			
+			}
 		}
-		}
-		}
-		System.out.print(sum);
+		System.out.print(cnt);
 		sc.close();	
 	}
 }
