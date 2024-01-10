@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Baek2903{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int arr[]=new int[15];
+        arr[0]=4;
+        int N=in.nextInt();
+        for(int n=1;n<=N;n++){
+            arr[n-1]=(int)Math.sqrt(arr[n-1]);
+            arr[n]=(arr[n-1]*2-1)*(arr[n-1]*2-1);
+        }
+        System.out.println(arr[N]);
+    }
+}
