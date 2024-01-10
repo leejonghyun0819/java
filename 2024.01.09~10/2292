@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Baek2292{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int arr[]=new int[166666668];
+        arr[0]=1;
+        for(int n=1;n<166666668;n++){
+            arr[n]=arr[n-1]+6*n;
+        }
+        int k=1;
+        int N=in.nextInt();
+        while(k!=-1){
+            if(N>arr[k-1]+1&&N<=arr[k]){
+                System.out.println(k+1);
+                k=-1;
+            }
+            else k++;
+        }
+    }
+}
+// 1		6(n-1)					
+// 6				2~7			[n_0]<k<=[n_0+1]
+// 12				8~19			[n_0+1]<k<=[n_0+1+2]
+// 18				20~37		[n_0+1+2]<k<=[n_0+1+2+3]
