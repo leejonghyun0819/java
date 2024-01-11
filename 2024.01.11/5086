@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Baek5086{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int k=0;
+        while(k!=-1){
+            int a = in.nextInt();
+            int b = in.nextInt();
+            if(a==0&&b==0){
+                k=-1;
+            }            
+            else if(a/b==0){
+                if(a%b!=0&&b%a==0){
+                    System.out.println("factor");
+                }
+                else{
+                    System.out.println("neither");                   
+                }
+            }
+            else{
+                if(a%b==0){
+                    System.out.println("multiple");
+                }
+                else{
+                    System.out.println("neither");
+                }
+            }
+
+        }
+    }
+}
