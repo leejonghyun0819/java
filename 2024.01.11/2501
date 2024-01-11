@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Baek2501{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int a=in.nextInt();
+        int n=in.nextInt();
+        int cnt=0, i;
+        loop:
+        for(i=1;i<=a;i++){
+            if(a%i==0){
+                cnt++;
+            }
+            else if(cnt==n){
+                break loop;
+            }
+        }
+        if(n>cnt){
+            i=1;
+        }
+        System.out.println(i-1);
+    }
+}
