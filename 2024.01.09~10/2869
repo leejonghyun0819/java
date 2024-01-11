@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Baek2869{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int a,b,v,current=0, day=0;;
+        a=in.nextInt();
+        b=in.nextInt();
+        v=in.nextInt();
+        while(current<v){
+            if(current+a>=v){
+                current=current+a;
+            }
+            else{
+                current=current+a-b;
+            }
+            day++;
+        }
+        System.out.println(day);
+    }
+}
