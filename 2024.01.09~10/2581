@@ -1,0 +1,38 @@
+package test;
+import java.util.Scanner;
+public class test{
+	public static void main (String[] args) {
+		Scanner sc =new Scanner(System.in);
+		int N=sc.nextInt();
+		int M=sc.nextInt();
+		int cnt=0,sum=0,min;
+		int [] number=new int[M-N+1];
+		for(int j=N;j<M;j++) {
+	for(int i=2;i<=j;i++) {
+			if(j==i) {
+				number[cnt]=i;
+				cnt++;
+			}
+			if(j%i==0) {
+				break;
+				}
+			}
+		}
+		if(cnt==0) {
+			System.out.println(-1);
+		}
+		else {
+		min=number[0];
+		for(int i=0;i<cnt;i++) {
+			if(min>number[i]) {
+				min=number[i];
+			}
+			sum+=number[i];
+		}
+		System.out.println(sum);
+		System.out.print(min);
+		}
+		
+		sc.close();	
+	}
+}
