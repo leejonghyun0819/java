@@ -1,0 +1,10 @@
+package test;
+import java.util.Scanner;
+public class test{
+	public static void main (String[] args) {
+		Scanner sc =new Scanner(System.in);
+		long n=sc.nextLong();//범위때문에 int못씀
+		System.out.print(n*4);
+		sc.close();	
+	}
+}
