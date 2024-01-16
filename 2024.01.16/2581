@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Baek2581{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int a=in.nextInt();
+        int k = in.nextInt();        
+        int sum=0, min=-1, cnt=0;
+        for(int i=a;i<=k;i++){
+            int temp=0;
+            for(int j=1;j<=i;j++){
+                if(i%j==0) {temp++;}
+            }
+            if(temp==2){
+                sum=sum+i;
+                cnt++;
+            }
+            if(cnt==1) min=sum;        
+        }
+        if(cnt==0){
+            System.out.println(min);
+        }
+        else{
+            System.out.printf("%d\n%d\n",sum,min);
+        }
+    }
+}
