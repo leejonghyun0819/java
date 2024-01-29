@@ -1,0 +1,21 @@
+#pragma warning(disable:4996)
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+int main() {
+	int a, b,c,n;
+	scanf("%d %d", &a, &b);
+	scanf("%d", &c);
+	scanf("%d", &n);
+	if (a*n+b<=c*n&&a<=c) {
+		printf("1");
+	}
+	
+	else {
+		printf("0");
+	}
+	return 0;
+}
+
+
