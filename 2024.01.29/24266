@@ -1,0 +1,14 @@
+#pragma warning(disable:4996)
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+int main() {
+	long int n;
+	scanf("%lld", &n);
+
+	printf("%lld\n3",n*n*n);
+	return 0;
+}
+
+
