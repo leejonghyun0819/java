@@ -1,0 +1,27 @@
+#pragma warning(disable:4996)
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int main() {
+	int N,result=0,m;
+	scanf("%d", &N);
+	for (int i=1; i < N; i++) {
+		m = i;
+		result = i;
+		while (m > 0) {
+			result += m % 10;
+			m = m / 10;
+		}
+		if (result==N) {
+			printf("%d", i);
+			N = 0;
+			break;
+		}
+	}
+	if (N!= 0) {
+		printf("0");
+	}
+	return 0;
+}
+
+
