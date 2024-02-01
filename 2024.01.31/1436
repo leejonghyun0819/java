@@ -1,0 +1,26 @@
+#pragma warning(disable:4996)
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int main() {
+	int N,M,cnt=0,m;
+	scanf("%d", &N);
+	for (int i = 666;; i++) {
+		M = i;
+		m = i;
+		while (M) {
+			if (M % 1000 == 666) {
+				cnt++;
+				break;
+			}
+			else {
+				M /= 10;
+			}
+		}
+		if (cnt == N) {
+			printf("%d", m);
+			break;
+		}
+	}
+	return 0;
+}
