@@ -1,0 +1,43 @@
+#pragma warning(disable:4996)
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int main() {
+	int N, M, w=0 ,b=0,min=65;
+	char num[50][50];
+	scanf("%d %d", &N,&M);
+	for (int i = 0; i < N; i++) {
+			scanf("%s", &num[i]);
+	}
+	for (int i = 0; i < N-7; i++) {
+		for (int j = 0; j < M-7; j++) {
+			w = 0; 
+			b = 0;
+			for (int k = i; k < i+8; k++) {
+				for (int l = j; l <j+ 8; l++) {
+					if ((k + l) % 2 == 0) {
+						if (num[k][l] == 'W') {
+							w++;
+						}
+						else
+							b++;
+						}
+					else {
+						if (num[k][l] == 'W') {
+							b++;
+						}
+						else
+							w++;
+					}
+				}
+			}
+			min=min < b ? min : b;
+			min=min < w ? min : w;
+		}
+	}
+	
+	printf("%d", min);
+	return 0;
+}
+
+
